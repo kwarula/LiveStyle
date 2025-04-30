@@ -58,15 +58,8 @@ const Membership = () => {
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Video or Image */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-event-dark/70 z-10"></div>
-          <img 
-            src="/membership-bg.jpg" 
-            alt="LiveStyle Events" 
-            className="w-full h-full object-cover"
-          />
-        </div>
+        {/* Background */}
+        <div className="absolute inset-0 z-0 bg-black"></div> {/* Changed to black background */}
         
         <div className="container mx-auto px-4 z-20 text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-on-scroll">
@@ -123,7 +116,7 @@ const Membership = () => {
                 </p>
                 <div className="h-0 overflow-hidden group-hover:h-auto group-hover:mt-4 transition-all duration-300 opacity-0 group-hover:opacity-100">
                   <p className="text-sm text-event-light/60 italic">
-                    "Our last secret event had Blinky Bill perform for just 50 members"
+                    "Our last secret event had a top Kenyan artiste perform for just 50 members" {/* Changed text */}
                   </p>
                 </div>
               </div>
@@ -236,7 +229,7 @@ const Membership = () => {
                 
                 <div className="bg-event-blue/20 p-4 rounded-lg border border-event-light/5 hover:border-event-neon/20 transition-all duration-300 cursor-pointer group">
                   <div className="text-xl font-bold mb-2 group-hover:text-event-neon transition-colors">June 3</div>
-                  <p className="text-event-light/80">Studio Session w/ Blinky</p>
+                  <p className="text-event-light/80">Studio Session w/ S.O.S</p> {/* Changed text */}
                   <div className="mt-2 text-xs text-event-neon">Inner Circle+</div>
                 </div>
                 
@@ -262,7 +255,7 @@ const Membership = () => {
           {/* Member Stats */}
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto animate-on-scroll">
             <div className="bg-event-dark/30 backdrop-blur-sm p-6 rounded-lg text-center">
-              <div className="text-3xl md:text-4xl font-bold text-event-neon mb-2">438</div>
+              <div className="text-3xl md:text-4xl font-bold text-event-neon mb-2">18</div> {/* Changed number */}
               <p className="text-event-light/70 text-sm">Active Members</p>
             </div>
             
@@ -369,7 +362,7 @@ const Membership = () => {
           
           <div className="text-center mt-8 animate-on-scroll">
             <p className="text-event-light/70 text-lg">
-              <span className="font-bold text-event-neon">438</span> members and counting...
+              <span className="font-bold text-event-neon">18</span> members and counting... {/* Changed number */}
             </p>
           </div>
         </div>
@@ -407,12 +400,14 @@ const Membership = () => {
               </ul>
               
               <div ref={formRef} id="form">
-                <MembershipFormDialog 
+                <MembershipFormDialog
+                  tierName="Standard Access"
+                  price={2000}
                   trigger={
                     <Button className="w-full bg-event-neon text-event-dark hover:bg-event-neon/80 font-bold">
                       Become a Member
                     </Button>
-                  } 
+                  }
                 />
               </div>
             </div>
@@ -448,12 +443,14 @@ const Membership = () => {
                 </li>
               </ul>
               
-              <MembershipFormDialog 
+              <MembershipFormDialog
+                tierName="Inner Circle Plus"
+                price={5000}
                 trigger={
                   <Button className="w-full bg-event-neon text-event-dark hover:bg-event-neon/80 font-bold">
                     Upgrade to Inner Circle Plus
                   </Button>
-                } 
+                }
               />
             </div>
           </div>
@@ -475,7 +472,10 @@ const Membership = () => {
               Don't just witness it — be part of creating it.
             </p>
             
-            <MembershipFormDialog 
+            {/* Assuming the final CTA should default to Standard */}
+            <MembershipFormDialog
+              tierName="Standard Access" 
+              price={2000}
               trigger={
                 <Button 
                   size="lg" 

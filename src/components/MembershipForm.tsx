@@ -44,12 +44,16 @@ const MembershipFormContent = ({
   isSubmitting,
   onSubmit,
   setFormStep,
+  tierName, // Destructure tierName
+  price, // Destructure price
 }: {
   form: ReturnType<typeof useForm<FormData>>;
   formStep: number;
   isSubmitting: boolean;
   onSubmit: (values: FormData) => void;
   setFormStep: React.Dispatch<React.SetStateAction<number>>;
+  tierName: string; // Added prop
+  price: number; // Added prop
 }) => {
   return (
     <Form {...form}>
@@ -140,8 +144,8 @@ const MembershipFormContent = ({
         {formStep === 2 && (
           <>
             <div className="space-y-2 text-sm bg-blue-900/30 p-4 rounded-md">
-              <p className="font-semibold text-event-neon">Payment Instructions:</p>
-              <p>Send KES 2,000 to Mpesa Till Number:</p>
+              <p className="font-semibold text-event-neon">Payment Instructions for {tierName}:</p> {/* Use tierName */}
+              <p>Send KES {price.toLocaleString()} to Mpesa Till Number:</p> {/* Use price */}
               <p className="font-bold text-lg">5476447 (Afrotape Entertainment)</p>
               <p className="mt-2">After sending, enter the Mpesa confirmation code below.</p>
             </div>
@@ -176,11 +180,18 @@ const MembershipFormContent = ({
   );
 };
 
+// Define props for the main dialog component
+interface MembershipFormDialogProps {
+  trigger: React.ReactNode;
+  tierName: string;
+  price: number;
+}
+
 // Main Dialog Component that manages state and renders the Dialog with the trigger
-export function MembershipFormDialog({ trigger }: { trigger: React.ReactNode }) {
+export function MembershipFormDialog({ trigger, tierName, price }: MembershipFormDialogProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [formStep, setFormStep] = useState(1); // 1: Initial form, 2: Confirmation code
-  const [formData, setFormData] = useState<FormData | null>(null);
+  const [formData, setFormData] = useState<FormData | null>(null); // Store step 1 data
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<FormData>({
@@ -277,6 +288,8 @@ export function MembershipFormDialog({ trigger }: { trigger: React.ReactNode }) 
           isSubmitting={isSubmitting}
           onSubmit={currentOnSubmit}
           setFormStep={setFormStep}
+          tierName={tierName} // Pass down props
+          price={price} // Pass down props
         />
       </DialogContent>
     </Dialog>

@@ -44,7 +44,7 @@ const Footer = () => {
         <div className="border-t border-white/10 pt-6 text-center text-sm">
           <p>© 2025 LiveStyle Diani. All Rights Reserved.</p> {/* Updated Copyright */}
           <p className="mt-2 text-event-light/60">
-            Website by <a href="#" className="text-event-neon hover:underline">Lovable</a>
+            Website by <a href="#" className="text-event-neon hover:underline">Afrotape</a>
           </p>
         </div>
       </div>

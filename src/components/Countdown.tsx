@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 
 const Countdown = () => {
@@ -40,12 +39,16 @@ const Countdown = () => {
     return () => clearInterval(interval);
   }, [eventDate]);
   
+  // Adjusted for responsiveness: removed fixed width, adjusted padding/font size
   const CountdownUnit = ({ value, label }: { value: number, label: string }) => (
     <div className="flex flex-col items-center">
-      <div className="bg-black/40 backdrop-blur-sm px-4 py-3 rounded-lg w-20 text-center">
-        <span className="text-3xl font-bold">{value.toString().padStart(2, '0')}</span>
+      {/* Removed w-20, adjusted padding, added min-w */}
+      <div className="bg-black/40 backdrop-blur-sm px-2 sm:px-3 py-2 sm:py-3 rounded-lg text-center min-w-[40px] sm:min-w-[60px]"> 
+        {/* Adjusted font size */}
+        <span className="text-2xl sm:text-3xl font-bold">{value.toString().padStart(2, '0')}</span>
       </div>
-      <span className="text-sm mt-1 text-event-light/70">{label}</span>
+      {/* Adjusted label font size */}
+      <span className="text-xs sm:text-sm mt-1 text-event-light/70">{label}</span>
     </div>
   );
 
@@ -56,13 +59,14 @@ const Countdown = () => {
           <span className="text-event-neon">COUNTDOWN</span> TO THE EVENT
         </h2>
         
-        <div className="flex justify-center items-center space-x-4 md:space-x-8">
+        {/* Adjusted spacing and colon size/margin for mobile */}
+        <div className="flex justify-center items-center space-x-2 sm:space-x-4 md:space-x-6">
           <CountdownUnit value={timeLeft.days} label="DAYS" />
-          <span className="text-3xl font-bold">:</span>
+          <span className="text-2xl sm:text-3xl font-bold mx-1 sm:mx-2">:</span> {/* Adjusted size/margin */}
           <CountdownUnit value={timeLeft.hours} label="HOURS" />
-          <span className="text-3xl font-bold">:</span>
+          <span className="text-2xl sm:text-3xl font-bold mx-1 sm:mx-2">:</span> {/* Adjusted size/margin */}
           <CountdownUnit value={timeLeft.minutes} label="MINS" />
-          <span className="text-3xl font-bold">:</span>
+          <span className="text-2xl sm:text-3xl font-bold mx-1 sm:mx-2">:</span> {/* Adjusted size/margin */}
           <CountdownUnit value={timeLeft.seconds} label="SECS" />
         </div>
       </div>
