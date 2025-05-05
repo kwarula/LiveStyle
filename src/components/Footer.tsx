@@ -27,9 +27,9 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold mb-4">Event Info</h3>
             <p className="mb-2">Pre-Game Friday</p>
-            <p className="mb-2">May 2nd, 2025</p>
+            <p className="mb-2">May 9th, 2025</p>
             <p className="mb-2">3:00 PM - 9:00 PM</p>
-            <p>Entry: KES 250</p>
+            <p>Entry: Ladies Free - Gents: KES 300</p>
           </div>
           
           <div>

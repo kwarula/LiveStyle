@@ -99,7 +99,7 @@ const RSVP = () => {
             <div className="flex-1">
               <h3 className="text-2xl font-bold mb-4">RSVP Details</h3>
               <p className="mb-6 text-event-light/90">
-                Reserve your spot for LiveStyle now! Entry fee is <span className="text-event-neon font-bold">KES 250</span> payable at the door.
+                Reserve your spot for LiveStyle now! Entry fee is <span className="text-event-neon font-bold">Ladies Free - Gents: KES 300</span> payable at the door.
               </p>
               
               <div className="space-y-4 mb-6">
@@ -123,7 +123,7 @@ const RSVP = () => {
                   </div>
                   <div>
                     <p className="font-medium">Pay at Entry</p>
-                    <p className="text-sm text-event-light/70">KES 250 per person</p>
+                    <p className="text-sm text-event-light/70">Ladies Free - Gents: KES 300</p>
                   </div>
                 </div>
                 
