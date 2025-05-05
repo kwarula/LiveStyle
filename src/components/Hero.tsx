@@ -40,13 +40,13 @@ const Hero = () => {
           
           <div className="bg-black/30 backdrop-blur-sm py-4 px-6 rounded-lg inline-block mb-8">
             <p className="text-xl md:text-2xl font-medium mb-2">
-              MAY 2ND, 2025 • 3PM - 9PM
+              MAY 9TH, 2025 • 3PM - 9PM
             </p>
             <p className="text-lg md:text-xl mb-1">
               Soul Culture Hub - Soul Breeze Beach Resort, Diani
             </p>
             <p className="text-event-neon font-bold">
-              ENTRY: KES 250
+              ENTRY: Ladies Free - Gents: KES 300
             </p>
           </div>
           
@@ -55,7 +55,7 @@ const Hero = () => {
           </Button>
           
           <p className="mt-6 text-event-light/80">
-            Featuring DJ Kimtai • DJ Ricky • S.O.S
+            Featuring Dogo la Diani • DJ Bever • DJ Ricky
           </p>
         </div>
       </div>

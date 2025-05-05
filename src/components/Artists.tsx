@@ -3,22 +3,22 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Artists = () => {
   const artists = [{
-    name: "DJ Kimtai",
-    image: "/lovable-uploads/ad1c4f31-b745-4f2e-996c-ee07b089ca9e.png", // Unchanged image
-    description: "Spinning the hottest tracks in Hip Hop, Trap, Afro, Dance, and Pop.", // Updated description
-    genre: "HIP HOP, Trap, Afro / Dance / Pop" // Correct genre
+    name: "Dogo la Diani",
+    image: "/lovable-uploads/dogo.png",
+    description: "Award-winning Independent Professional recording and performing artist based in Diani, Kenya",
+    // No genre specified
+  }, {
+    name: "DJ Bever",
+    image: "/lovable-uploads/bever.png",
+    description: "Bringing dancehall and reggae vibes",
+    genre: "Dancehall / Reggae"
   }, {
     name: "DJ Ricky",
-    image: "/lovable-uploads/b3276a4c-c5ee-4a67-8a36-63dba2b2c271.png", // Swapped image (was S.O.S)
-    description: "Bringing the energy with Amapiano, Dancehall, and Afrobeats vibes.", // Updated description
-    genre: "Amapiano / Dancehall / Afrobeats" // Correct genre
-  }, {
-    name: "S.O.S",
-    image: "/lovable-uploads/8fcc8d6a-e0fd-4aed-9e68-431d8c9efe00.png", // Swapped image (was DJ Ricky)
-    description: "Your Host/MC for the night, keeping the energy high. Also an accomplished rapper.", // Updated description
-    // Genre remains removed
+    image: "/lovable-uploads/b3276a4c-c5ee-4a67-8a36-63dba2b2c271.png", // Image path confirmed correct
+    description: "Bringing the energy with Amapiano, Dancehall, and Afrobeats vibes.",
+    genre: "Amapiano / Dancehall / Afrobeats"
   }];
-  
+
   return <section id="artists" className="section-padding bg-gradient-to-b from-event-dark to-event-blue">
       <div className="event-container">
         <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">

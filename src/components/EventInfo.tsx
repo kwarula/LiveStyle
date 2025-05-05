@@ -13,7 +13,7 @@ const EventInfo = () => {
                 <Calendar className="text-event-neon mr-4 flex-shrink-0" size={28} />
                 <div>
                   <h3 className="text-xl font-bold mb-1">Date</h3>
-                  <p className="text-event-light/90">Friday, May 2nd, 2025</p>
+                  <p className="text-event-light/90">Friday, May 9th, 2025</p>
                 </div>
               </div>
               
@@ -38,7 +38,7 @@ const EventInfo = () => {
                 <Ticket className="text-event-neon mr-4 flex-shrink-0" size={28} />
                 <div>
                   <h3 className="text-xl font-bold mb-1">Entry Fee</h3>
-                  <p className="text-event-light/90">KES 250</p>
+                  <p className="text-event-light/90">Ladies Free - Gents: KES 300</p>
                 </div>
               </div>
             </div>
